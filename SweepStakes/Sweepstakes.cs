@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         //variables
         Dictionary<int, Contestant> contestants;
         private string name;
-        public string Name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+        Random random;
 
         //constructor
         public Sweepstakes(string name)
@@ -27,11 +34,15 @@ namespace SweepStakes
         }
         public Contestant PickWinner()
         {
-
+            int number = random.Next(contestants.Count);
+            return contestants[number];
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-            //this will be the same information as the RegisterContestant method?
+            Console.WriteLine(contestant.FirstName);
+            Console.WriteLine(contestant.LastName);
+            Console.WriteLine(contestant.EmailAddress);
+            Console.WriteLine(contestant.RegistrationNumber);
         }
     }
 }
