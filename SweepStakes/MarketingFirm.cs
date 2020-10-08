@@ -10,6 +10,7 @@ namespace SweepStakes
     {
         //variables
         ISweepstakesManager _manager;
+        
 
         //constructor
         public MarketingFirm(ISweepstakesManager manager)
@@ -17,9 +18,9 @@ namespace SweepStakes
             _manager = manager;
         }
         //method
-        public void CreateSweepstake()
+        public void CreateSweepstake(string name)
         {
-            ISweepstakesManager sweepstakesManager = new Sweepstakes(name);
+            Sweepstakes sweepstakes = new Sweepstakes("name");
         }
         
     }
