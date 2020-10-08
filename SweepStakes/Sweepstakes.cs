@@ -30,7 +30,6 @@ namespace SweepStakes
         {
             contestant.RegistrationNumber = contestants.Count;
             contestants.Add(contestant.RegistrationNumber, contestant);
-            //this just should be done with the variables in the contestant class?
         }
         public Contestant PickWinner()
         {

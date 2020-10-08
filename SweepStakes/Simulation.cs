@@ -15,7 +15,10 @@ namespace SweepStakes
         //method
         public void CreateMarketingFirmWithManager()
         {
-
+            ISweepstakesManager stack = new SweepstakesStackManager();
+            ISweepstakesManager queue = new SweepstakesQueueManager();
+            MarketingFirm marketingFirm = new MarketingFirm(queue);
+            MarketingFirm marketing = new MarketingFirm(stack);
         }
     }
 }
